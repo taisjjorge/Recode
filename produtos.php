@@ -40,7 +40,7 @@
     <?php 
         require_once "./actions/connect.php";
 
-        $sql = "SELECT * FROM produtos";
+        $sql = "SELECT * FROM nossosprodutos";
         $resultado = mysqli_query($connect, $sql);
 
         while($row=mysqli_fetch_assoc($resultado)){

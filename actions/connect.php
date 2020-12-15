@@ -10,8 +10,8 @@
     if(!$connect){
         die("A conexão falhou".mysqli_connect_error());
     } 
-    else {
+    /*else {
          echo "Conexão estabelecida";
-     }
+     }*/
  
 ?>

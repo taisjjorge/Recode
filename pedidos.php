@@ -25,23 +25,36 @@
     <!-- ### FIM MENU ### -->
     <main>
 
+    <?php
+        require_once('./actions/connect.php');
+        require('./actions/pedidos.php');
+    ?>
+
     <form action="./actions/pedidos.php" method="POST">
         <div class="form-group ">
             <label for="nome_cliente">Nome</label>
-            <input class="form-control" type="text" name="nome_cliente" id="nome_cliente">
+            <input class="form-control" type="text" 
+            name="nome_cliente" id="nome_cliente">
             <label for="endereco">Endereco</label>
-            <input class="form-control" type="text" name="endereco" id="endereco">
+            <input class="form-control" type="text" 
+            name="endereco" id="endereco">
             <label for="telefone">Telefone</label>
-            <input class="form-control" type="text" name="telefone" id="telefone">
+            <input class="form-control" type="text" 
+            name="telefone" id="telefone">
             <label for="nome_prod">Nome do Produto</label>
-            <input class="form-control" type="text" name="nome_prod" id="nome_prod">
+            <input class="form-control" type="text" 
+            name="nome_prod" id="nome_prod">
             <label for="valor_unit">Valor Unitário</label>
-            <input class="form-control" type="text" name="valor_unit" id="valor_unit">
+            <input class="form-control" type="text" 
+            name="valor_unit" id="valor_unit">
             <label for="quantidade">Quantidade</label>
-            <input class="form-control" type="text" name="quantidade" id="quantidade">
+            <input class="form-control" type="text" 
+            name="quantidade" id="quantidade">
             <label for="valor_total">Valor Total</label>
-            <input class="form-control" type="text" name="valor_total" id="valor_total">
-            <button class="btn btn-primary" type="submit" name="cadastrar">Cadastrar</button>
+            <input class="form-control" type="text" 
+            name="valor_total" id="valor_total">
+            <button class="btn btn-primary" type="submit" 
+            name="cadastrar">Cadastrar</button>
     </div>
     </form>
 
