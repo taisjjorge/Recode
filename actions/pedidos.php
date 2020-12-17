@@ -2,7 +2,7 @@
 
     require_once "connect.php";
 
-    if(isset($_POST['cadastrar'])) {
+    
         $nome_cliente = $_POST['nome_cliente'];
         $endereco = $_POST['endereco'];
         $telefone = $_POST['telefone'];
@@ -12,12 +12,14 @@
         $valor_total = $_POST['valor_total'];
 
         $sql = "INSERT INTO pedidos (nome_cliente, endereco, telefone, nome_prod, valor_unit, quantidade, valor_total)
-        VALUES (null, '$nome_cliente', '$endereco', '$telefone', '$nome_prod', '$valor_unit', $quantidade, '$valor_total');";
-        $result = $connect->query($sql);
-
-    } else {
-        echo "olá mundo";
-    }
+        VALUES ('$nome_cliente', '$endereco', '$telefone', '$nome_prod', '$valor_unit', $quantidade, '$valor_total');";
+        
+        if($connect){
+            mysqli_query($connect, $sql);
+        } else {
+            echo "falha na conexão";
+        }
+    
 
         //mysqli_query($connect, $sql);
         
@@ -26,7 +28,7 @@
     
 
     /* 
-    ####################### código Renata ####################
+    ####################### alternativa2 ####################
     <?php
 
 
@@ -54,5 +56,9 @@
 ?> */
 
 
-
 ?>
+
+<!-- redireciona para a página inicial pós cadastro pedido -->
+<script> 
+    window.location.href="../index.php"
+</script>

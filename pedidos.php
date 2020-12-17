@@ -27,7 +27,6 @@
 
     <?php
         require_once('./actions/connect.php');
-        require('./actions/pedidos.php');
     ?>
 
     <form action="./actions/pedidos.php" method="POST">

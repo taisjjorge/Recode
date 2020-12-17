@@ -43,7 +43,7 @@
         $sql = "SELECT * FROM nossosprodutos";
         $resultado = mysqli_query($connect, $sql);
 
-        while($row=mysqli_fetch_assoc($resultado)){
+        while($row=mysqli_fetch_assoc($resultado)){ //para cada 'linha', ele executa a div produtos individualmente
     
     ?>
 
@@ -59,7 +59,7 @@
         </div>
     
     <?php 
-        }
+        } // não fez interpolação(" {}")
     ?>
     
     </div>
