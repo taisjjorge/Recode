@@ -28,7 +28,7 @@
     <?php
         require_once('./actions/connect.php');
     ?>
-
+<div class="container mt-2 mb-5">
     <form action="./actions/pedidos.php" method="POST">
         <div class="form-group ">
             <label for="nome_cliente">Nome</label>
@@ -56,7 +56,7 @@
             name="cadastrar">Cadastrar</button>
     </div>
     </form>
-
+</div>
 
 
 </main>
